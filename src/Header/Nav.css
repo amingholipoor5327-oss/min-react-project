@@ -1,0 +1,35 @@
+/* ===== استایل ساده و کلاسیک ===== */
+
+.nav {
+    background-color: #00274e;
+    padding: 1rem 2rem;
+    border-bottom: 1px solid #23f218;
+ }
+
+.nav-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nav-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 0.5rem 0;
+    transition: color 0.2s ease;
+    font-weight: 500;
+    transition: all .3s;
+}
+
+.nav-link:hover {
+    color: #6ab9ff;
+    transform: translateY(-5px);
+}
+
+ .nav-link.active {
+    color: #ffffff;
+    border-bottom: 2px solid #228be6;
+}
