@@ -1,32 +1,29 @@
 import axios from "axios"
-import { useEffect, useState } from "react"
+import { useQuery } from "@tanstack/react-query"
 import "./home.css"
-export const Home = ()=>{
 
-    const [data , setData ] = useState("")
+export const Home = () => {
 
-    const getData = ()=>{
-        axios.get("https://catfact.ninja/fact")
-        .then((res)=>{
-            setData(res.data.fact)
-        })
-    }
+  const { data, isLoading, error, refetch } = useQuery({
+    queryKey: ["cat"],
+    queryFn: () =>
+      axios.get("https://catfact.ninja/fact")
+           .then(res => res.data.fact)
+  })
 
-    useEffect(()=>{
-        getData()
-    }, [])
+  return (
+    <div className="home-container">
+      <h1>🐱 Random Cat Fact</h1>
 
-return (
-  <div className="home-container">
-    <h1>🐱 Random Cat Fact</h1>
+      <div className="fact-box">
+        {isLoading && "Loading..."}
+        {error && "Something went wrong 😢"}
+        {data && data}
+      </div>
 
-    <div className="fact-box">
-      {data ? data : "Click the button to get a fact"}
+      <button onClick={refetch}>
+        Get Cat Fact
+      </button>
     </div>
-
-    <button onClick={getData}>
-      Get Cat Fact
-    </button>
-  </div>
-);
+  )
 }
