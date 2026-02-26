@@ -1,0 +1,45 @@
+.about-container {
+  max-width: 800px;
+  margin: 80px auto;
+  padding: 40px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.about-hero {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.about-hero h1 {
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+.about-hero p {
+  color: #555;
+  font-size: 16px;
+}
+
+.about-section {
+  margin-bottom: 35px;
+}
+
+.about-section h2 {
+  margin-bottom: 10px;
+  color: #111;
+}
+
+.about-section p {
+  color: #444;
+  line-height: 1.7;
+}
+
+.about-section ul {
+  padding-left: 20px;
+}
+
+.about-section li {
+  margin-bottom: 8px;
+}
