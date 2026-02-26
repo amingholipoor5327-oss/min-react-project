@@ -63,3 +63,10 @@ span{
     cursor: copy;
     color: gray;
 }
+.error {
+  color: red;
+  font-size: 13px;
+  margin-top: -10px;
+  margin-bottom: 10px;
+  text-align: left;
+}
