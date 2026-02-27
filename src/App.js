@@ -4,6 +4,7 @@ import { Home } from "./pages/Home/home";
 import { About } from "./pages/About/about";
 import { Nav } from "./Header/Nav";
 import { Contact } from "./pages/Contact/contact";
+import { Search } from "./pages/search/search";
 import { QueryClientProvider , QueryClient } from "@tanstack/react-query";
  function App() {
   const Client = new QueryClient()
@@ -17,6 +18,7 @@ import { QueryClientProvider , QueryClient } from "@tanstack/react-query";
           <Route path="/" element={<Home/>}> </Route>
           <Route path="/contact" element={<Contact/>}> </Route>
           <Route path="/about" element={<About/>}> </Route>
+          <Route path="/search" element={<Search/>}> </Route>
         </Routes>
       </Router>
       </QueryClientProvider>
